@@ -24,9 +24,8 @@ async def get_report_async(city: str, state: Optional[str], country: str, units:
         if resp.status_code != 200:
             raise ValidationError(resp.text, status_code=resp.status_code)
 
-
     data = resp.json()
-    forecast = data['main']
+    forecast = {'weather': data['weather'][0]['main'], 'description': data['weather'][0]['description'], **data['main']}
     weather_cache.set_weather(city, state, country, units, forecast)
 
     return forecast

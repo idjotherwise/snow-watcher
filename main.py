@@ -37,9 +37,9 @@ def configure_fake_data():
     if not loop:
         loop = asyncio.get_event_loop()
     try:
-        loc = Location(city="Feldkirch", state="Vb", country="AT")
-        loop.run_until_complete(report_service.add_report("Shitton of snow today, awsome", loc))
-        loop.run_until_complete(report_service.add_report("Bit of windy blow blow, tomorrow", loc))
+        loc = Location(city="Feldkirch", country="AT")
+        loop.run_until_complete(report_service.add_report("Lots of rain today", loc))
+        loop.run_until_complete(report_service.add_report("More rain expected tomorrow", loc))
     except RuntimeError:
         print("Could not import starter data but that's fine, get over it")
 

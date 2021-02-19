@@ -10,6 +10,7 @@ from api import weather_api
 from models.location import Location
 from services import openweather_service, report_service
 from views import home
+from views import pictures
 
 api = fastapi.FastAPI()
 
@@ -49,6 +50,7 @@ def configure_routing():
     api.mount('/static', StaticFiles(directory='static'), name='static')
     api.include_router(home.router)
     api.include_router(weather_api.router)
+    api.include_router(pictures.router)
 
 if __name__ == '__main__':
     configure()

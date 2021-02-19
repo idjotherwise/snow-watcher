@@ -1,0 +1,27 @@
+{% extends "shared/layout.html" %}
+{% set active_page = "index" %}
+{% block content %}
+
+{% if location %}
+<p>You have searched for {{ location['city'] }} in {{ location['country'] }}.</p>
+<p>{% if data.temp > data.feels_like %} It currently feels colder than it really is by {% set tempdiff = data.temp - data.feels_like %} {{ tempdiff|round }} degrees. {% endif %}</p>
+<p>
+{% endif %}
+<table style="width:100%">
+  <!-- table header -->
+  {% if data %}
+  <tr>
+     {% for key in data %}
+     <th> {{ key }} </th>
+     {% endfor %}
+  </tr>
+  {% endif %}
+  <!-- table rows -->
+  {% for value in data.values() %}
+     <td style="text-align: center;"> {{ value }} </td>
+  {% endfor %}
+
+
+</table>
+
+{% endblock %}

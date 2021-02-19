@@ -21,20 +21,40 @@
     <div class="container">
         <div class="row">
             <div class="col-md-2">
+
+                    <img src="/static/img/cloud.png" style="float: left; max-width: 48px; margin-right: 20px;" alt="">
+                    <h1>
+                        <span class="font-semi-bold">Snow Checker</span>
+                        <div class="font-semi-bold navlist" style="float:right;">
+                                                        {% set navigation_bar = [
+                                ('/', 'index', 'Home'),
+                                ('/pictures', 'pictures', 'Pictures')
+                            ] -%}
+                            {% set active_page = active_page|default('index') -%}
+
+                            <ul id="navigation">
+                            {% for href, id, caption in navigation_bar %}
+                              <li{% if id == active_page %} class="active"{% endif
+                              %}><a href="{{ href|e }}">{{ caption|e }}</a></li>
+                            {% endfor %}
+                            </ul>
+                        </div>
+                    </h1>
+
+
+
             </div>
             <div class="col-md-10">
                 <div>
-
-                    {% block content %}
-                    <div class="content">
-                        THIS PAGE HAS NO CONTENT
-                    </div>
-                    {% endblock %}
-
+                        {% block content %}
+                            <div class="content">
+                                THIS PAGE HAS NO CONTENT
+                            </div>
+                        {% endblock %}
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="footer">
             <div class="links">
                 <ul>
                     <li><i class="glyphicon glyphicon-cog icon-muted"></i><a

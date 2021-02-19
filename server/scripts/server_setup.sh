@@ -49,6 +49,8 @@ cp /apps/app_repo/server/units/weather.service /etc/systemd/system/
 systemctl start weather
 systemctl status weather
 systemctl enable weather
+### to restart use:
+# systemctl restart weather
 
 # setup public facing server
 apt install nginx

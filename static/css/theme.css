@@ -56,10 +56,51 @@ p {
     font-size: 25px;
 }
 
+.starter-template .footer {
+    position: fixed;
+    left: 0;
+    bottom: 5%;
+    width: 100%;
+}
+
 .starter-template .links {
-    float: right;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    float: none;
     right: 0;
+    bottom: 0;
     margin-top: 125px;
+    text-align: center;
+}
+
+.navlist ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #FFFFFF;
+}
+
+.navlist li {
+  float: left;
+}
+
+.navlist li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navlist .active {
+  background-color: #CCD6DC;
+}
+
+/* Change the link color to #111 (black) on hover */
+.navlist li a:hover {
+  background-color: #E0E8EC;
 }
 
 .starter-template .links ul {

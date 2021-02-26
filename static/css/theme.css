@@ -170,6 +170,35 @@ p {
         margin: 40px auto;
     }
 
+    .navlist ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #FFFFFF;
+}
+
+.navlist li {
+  float: left;
+}
+
+.navlist li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navlist .active {
+  background-color: #CCD6DC;
+}
+
+/* Change the link color to #111 (black) on hover */
+.navlist li a:hover {
+  background-color: #E0E8EC;
+}
+
     .starter-template .content {
         margin-left: 0;
         text-align: center;
@@ -217,6 +246,34 @@ p {
     .starter-template .copyright {
         margin-top: 20px;
     }
+    .navlist ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #FFFFFF;
+}
+
+.navlist li {
+  float: left;
+}
+
+.navlist li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navlist .active {
+  background-color: #CCD6DC;
+}
+
+/* Change the link color to #111 (black) on hover */
+.navlist li a:hover {
+  background-color: #E0E8EC;
+}
 }
 
 
